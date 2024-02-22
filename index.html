@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Factory</title>
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <nav>
+        <div id="nav-title"><a href="./">Chocolate Factory</a></div>
+        <ul>
+            <li><a href="./shop.html">Shop</a></li>
+            <li><a href="./factory-tour.html">Factory Tour</a></li>
+            <li><a href="./about-us.html">About us</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="banner">
+        <div class="overlay"></div>
+        <video autoplay muted loop id="video-banner">
+            <source src="https://res.cloudinary.com/datstzhhh/video/upload/v1708616339/HTML5-CSS3/chocolate-background_rpmkz2.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="banner-content">
+            <h1>Welcome to the Chocolate Factory</h1>
+            <p>Here you can buy our delicious chocolate.</p>
+            <a href="./shop.html"><button class="btn">Shop Now</button></a>
+        </div>
+    </header>
+    <section class="landing-page-section landing-page-exclusive-tour-section ">
+        <h2 class="landing-page-section-title">Buy a chocolate bar for a chance to win an exclusive tour with our company Founder.</h2>
+        <div class="product-container" data-aos="fade-up">
+            <div class="product">
+                <img class="product-image" src="./assets/images/darkChocolateBar.webp" alt="Dark Chocolate" />
+                <h3 class="product-title">Dark Chocolate</h3>
+                <p class="product-price">$1.99</p>
+            </div>
+            <div class="product">
+                <img class="product-image" src="./assets/images/milkChocolateBar.webp" alt="Milk Chocolate" />
+                <h3 class="product-title">Milk Chocolate</h3>
+                <p class="product-price">$1.99</p>
+            </div>
+            <div class="product">
+                <img class="product-image" src="./assets/images/almondChocolateBar.webp" alt="Almond Chocolate" />
+                <h3 class="product-title">Almond Chocolate</h3>
+                <p class="product-price">$1.99</p>
+            </div>
+        </div>
+    </section>
+    <section class="landing-page-section schedule-tour-container">
+        <div class="schedule-tour-content">
+            <div data-aos="fade-right">
+                <img class="landing-page-tour-image" src="./assets/images/factoryTour.webp" alt="Factory Tour" />
+            </div>
+            <div class="schedule-tour-content-text" data-aos="fade-left">
+                <h2 class="landing-page-section-title">Schedule a tour</h2>
+                <p>Enter a world of your imagination: tour the chocolate factory and learn how our world-renowned chocolate is made.</p>
+                <a href="./factory-tour.html"><button class="btn">Book Now</button></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; <script>document.write((new Date()).getFullYear())</script> Chocolate Factory</p>
+    </footer>
+</body>
+</html>
+<script>
+    AOS.init();
+</script>
