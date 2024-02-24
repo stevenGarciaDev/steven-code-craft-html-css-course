@@ -18,6 +18,7 @@
 /* Typography */
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -42,47 +43,94 @@ body {
 
 /* Navigation */
 nav {
+    align-items: center;
     background-color: var(--color-dark-purple);
     color: var(--color-white);
     display: flex;
     flex-direction: row;
+    height: 84px;
     justify-content: space-between;
     padding: 1.2rem;
+    position: relative;
 }
 
 #nav-title {
-    align-items: center;
-    display: flex;
     font-size: 2rem;
     font-weight: bold;
-    justify-content: center;
 
     @media screen and (min-width: 1000px) {
         font-size: 3rem;
     }
 }
 
+.nav-menu {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    @media screen and (min-width: 1000px) {
+        display: none;
+    }
+}
+
 nav ul {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    padding: 0px;
+    position: absolute;
+    top: 82px;
+    z-index: 2;
+    margin: 0px;
 
     @media screen and (min-width: 1000px) {
         display: block;
+        position: relative;
+        top: 0;
     }
 }
 
 nav ul li {
+    background-color: var(--color-primary);
     display: inline;
     list-style-type: none;
+    padding: 0px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    text-align: center;
+    width: 100vw;
+    z-index: 2;
+
+    @media screen and (min-width: 1000px) {
+        background-color: var(--color-dark-purple);
+        border: none;
+    }
 }
 
 nav a {
     color: var(--color-white);
+    display: inline-block;
+    font-weight: bold;
+    height: 100%;
     padding: 1.5rem;
     text-decoration: none;
-    font-weight: bold;
+    width: 100%;
 
     &:hover {
         color: var(--color-accent);
+    }
+
+    @media screen and (min-width: 1000px) {
+        display: inline;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+
+    @media screen and (min-width: 1000px) {
+        visibility: visible;
     }
 }
 
@@ -172,8 +220,8 @@ textarea {
     display: flex;
     flex-direction: column;;
     justify-content: center;
-    text-align: center;
     padding: 2rem;
+    text-align: center;
 }
 
 .product-image {
@@ -196,6 +244,7 @@ textarea {
 .banner {
     align-items: center;
     background-color: var(--color-dark-purple);
+    height: calc(100vh - 108px);
     color: var(--color-white);
     display: flex;
     position: relative;
@@ -239,6 +288,10 @@ textarea {
     @media screen and (min-width: 768px) {
         position: absolute;
     }
+}
+
+.banner-content h1 {
+    line-height: 6.5rem;
 }
 
 .landing-page-section {
