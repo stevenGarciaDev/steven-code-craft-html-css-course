@@ -441,6 +441,7 @@ textarea {
     color: var(--color-dark-purple);
     margin: 0 auto;
     max-width: 1080px;
+    padding: 0 1.5rem;
 }
 
 .about-image-container {
